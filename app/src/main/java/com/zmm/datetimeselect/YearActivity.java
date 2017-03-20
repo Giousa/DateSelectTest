@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,8 +40,6 @@ public class YearActivity extends AppCompatActivity {
     private WheelView wl_start_year;
 
     private RelativeLayout rl_main;
-    private int curYear;
-    private int curMonth;
     private int mScreenWidth;
     private String selectDate;//选择时间
     private NumericWheelAdapter mWheelAdapter;
@@ -89,6 +88,7 @@ public class YearActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 selectDate = wl_start_year.getCurrentItem() + 2000 + "";//年
+                Log.d("DATE YEAR","select year = "+selectDate);
                 popupWindow.dismiss();
             }
         });
@@ -104,8 +104,6 @@ public class YearActivity extends AppCompatActivity {
     private void initWheelView(View view) {
         Calendar c = Calendar.getInstance();
         int curYear = c.get(Calendar.YEAR);
-        int curMonth = c.get(Calendar.MONTH) + 1;//通过Calendar算出的月数要+1
-        /*****************开始时间***********************/
         wl_start_year = (WheelView) view.findViewById(R.id.wl_start_year);
 
         mWheelAdapter = new NumericWheelAdapter(this, 2000, 2020);
@@ -133,7 +131,8 @@ public class YearActivity extends AppCompatActivity {
 
         @Override
         public void onScrollingFinished(WheelView wheel) {
-
+            selectDate = wl_start_year.getCurrentItem() + 2000 + "";
+            Log.d("YearActivity","当前选中年份:"+selectDate);
         }
     };
     private void setTextViewSize(String curriteItemText, NumericWheelAdapter adapter) {
