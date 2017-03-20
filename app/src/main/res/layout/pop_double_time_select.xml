@@ -14,11 +14,13 @@
         android:text="选择时间"
         android:textSize="18sp" />
 
-            <com.zmm.wheelview.WheelView
-                android:id="@+id/wl_start_year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+        <com.zmm.wheelview.WheelView
+            android:id="@+id/wl_start_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+    <View style="@style/stroke" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -35,6 +35,9 @@
             android:layout_gravity="center_vertical"
             />
     </LinearLayout>
+
+    <View style="@style/stroke" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginLeft="14dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/shape_rectangle_white"
             android:gravity="center"
             android:text="cancel"
@@ -60,7 +63,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="20.0dip"
             android:layout_marginRight="14dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/shape_rectangle_blue"
             android:gravity="center"
             android:text="confirm"
