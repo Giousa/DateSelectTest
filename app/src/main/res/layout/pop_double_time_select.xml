@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:background="@drawable/shape_corners"
     android:orientation="vertical">
-    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,7 +48,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_rectangle_blue"
             android:gravity="center"
-            android:text="submit"
+            android:text="confirm"
             android:textColor="#ffffff" />
     </LinearLayout>
 </LinearLayout>
