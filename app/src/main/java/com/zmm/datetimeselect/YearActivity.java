@@ -112,6 +112,7 @@ public class YearActivity extends AppCompatActivity {
         mWheelAdapter.setTextColor(R.color.black);
         mWheelAdapter.setTextSize(20);
         wl_start_year.setCyclic(true);//是否可循环滑动
+        wl_start_year.setVisibleItems(5);
         wl_start_year.addScrollingListener(startScrollListener);
         wl_start_year.setCurrentItem(curYear - 2000);
         wl_start_year.addChangingListener(new OnWheelChangedListener() {

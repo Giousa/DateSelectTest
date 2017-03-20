@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         numericWheelAdapterStart1.setTextColor(R.color.black);
         numericWheelAdapterStart1.setTextSize(20);
         wl_start_year.setCyclic(true);//是否可循环滑动
+        wl_start_year.setVisibleItems(5);
         wl_start_year.addScrollingListener(startScrollListener);
         wl_start_year.addChangingListener(new OnWheelChangedListener() {
             @Override
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         numericWheelAdapterStart2.setTextColor(R.color.black);
         numericWheelAdapterStart2.setTextSize(20);
         wl_start_month.setCyclic(true);
+        wl_start_month.setVisibleItems(5);
         wl_start_month.addScrollingListener(startScrollListener);
         wl_start_month.addChangingListener(new OnWheelChangedListener() {
             @Override
@@ -130,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         numericWheelAdapterStart3.setTextColor(R.color.black);
         numericWheelAdapterStart3.setTextSize(20);
         wl_start_day.setCyclic(true);
+        wl_start_day.setVisibleItems(5);
         wl_start_day.addScrollingListener(startScrollListener);
     }
 
